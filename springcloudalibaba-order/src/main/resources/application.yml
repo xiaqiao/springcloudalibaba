@@ -6,7 +6,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.100.120.80:8848
+        server-addr: 127.0.0.1:8848
         username: x123
         password: x123
 management:
