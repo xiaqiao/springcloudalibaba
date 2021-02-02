@@ -1,0 +1,19 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: springcloudalibaba-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.100.120.80:8848
+        username: x123
+        password: x123
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
