@@ -11,9 +11,13 @@
         <module name="springcloudalibaba-order" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springcloudalibaba-config" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springcloudalibaba-config" options="-parameters" />
       <module name="springcloudalibaba-order" options="-parameters" />
       <module name="springcloudalibaba-user" options="-parameters" />
     </option>
