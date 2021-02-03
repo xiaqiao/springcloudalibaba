@@ -7,8 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloudalibaba-user" />
         <module name="springcloudalibaba-order" />
+        <module name="springcloudalibaba-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
