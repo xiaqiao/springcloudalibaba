@@ -25,7 +25,7 @@ public class OrderController {
     @Autowired
     private UserFeignClient userFeignClient;
 
-    @Value("${orderName}")
+    @Value("${order.name}")
     private String orderName;
 
     @GetMapping("/{id}")
