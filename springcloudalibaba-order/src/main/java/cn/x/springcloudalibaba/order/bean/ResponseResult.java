@@ -40,6 +40,14 @@ public class ResponseResult<T> implements Serializable {
         return new ResponseResult(101, "failed: param error");
     }
 
+    public static ResponseResult flowLimit() {
+        return new ResponseResult(102, "failed: flow limit");
+    }
+
+    public static ResponseResult sysError() {
+        return new ResponseResult(500, "failed: sys error");
+    }
+
     public static ResponseResult forbidError() {
         return new ResponseResult(1001, "failed: forbid error");
     }

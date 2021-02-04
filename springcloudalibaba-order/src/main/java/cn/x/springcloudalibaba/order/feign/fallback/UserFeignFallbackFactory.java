@@ -25,7 +25,7 @@ public class UserFeignFallbackFactory implements FallbackFactory<UserFeignClient
             public ResponseResult getUserInfo(Integer id) {
                 Map<String, Object> map = new HashMap<>();
                 map.put("id", -1);
-                map.put("name", "x");
+                map.put("name", "error");
                 return ResponseResult.success(map);
             }
         };
