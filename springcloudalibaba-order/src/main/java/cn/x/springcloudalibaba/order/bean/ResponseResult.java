@@ -1,6 +1,8 @@
 package cn.x.springcloudalibaba.order.bean;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -9,6 +11,8 @@ import java.io.Serializable;
  * @since 2021/2/2
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ResponseResult<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -17,39 +21,24 @@ public class ResponseResult<T> implements Serializable {
     private String message = "success";
     private T data;
 
-    public ResponseResult() {
-
-    }
-
-    public ResponseResult(Integer code, String message) {
-        this.code = code;
-        this.message = message;
-    }
-
-    private ResponseResult(Integer code, String message, T data) {
-        this.code = code;
-        this.message = message;
-        this.data = data;
-    }
-
     public static ResponseResult success(Object data) {
         return new ResponseResult<>(0, "success", data);
     }
 
     public static ResponseResult paramError() {
-        return new ResponseResult(101, "failed: param error");
+        return new ResponseResult<>(101, "failed: param error", null);
     }
 
     public static ResponseResult flowLimit() {
-        return new ResponseResult(102, "failed: flow limit");
+        return new ResponseResult<>(102, "failed: flow limit", null);
     }
 
     public static ResponseResult sysError() {
-        return new ResponseResult(500, "failed: sys error");
+        return new ResponseResult<>(500, "failed: sys error", null);
     }
 
     public static ResponseResult forbidError() {
-        return new ResponseResult(1001, "failed: forbid error");
+        return new ResponseResult<>(1001, "failed: forbid error", null);
     }
 
 }
