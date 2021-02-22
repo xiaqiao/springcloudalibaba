@@ -1,4 +1,4 @@
-package cn.x.springcloudalibaba.order.bean;
+package cn.x.springcloudalibaba.user.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
