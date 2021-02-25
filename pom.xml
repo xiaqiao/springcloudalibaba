@@ -10,6 +10,7 @@
     <modules>
         <module>springcloudalibaba-user</module>
 		<module>springcloudalibaba-order</module>
+        <module>springcloudalibaba-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
