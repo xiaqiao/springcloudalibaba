@@ -26,7 +26,7 @@ public class IpFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
-        log.info("请求的ip是{}", getIp(request));
+        log.info("ip:{}", getIp(request));
         //todo 拦截黑名单
         return chain.filter(exchange);
     }
