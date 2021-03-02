@@ -35,7 +35,8 @@ public class LogFilter implements GlobalFilter {
         log.info("params:{}", paramSb.toString());
 
         HttpHeaders headers = request.getHeaders();
-        log.info("Authorization:{}", headers.getOrEmpty("Authorization").get(0));
+        log.info("Authorization:{}", String.join(";", headers.getOrEmpty("Authorization")));
+
         return chain.filter(exchange);
     }
 }
