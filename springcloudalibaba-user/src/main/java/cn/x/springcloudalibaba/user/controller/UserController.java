@@ -34,9 +34,14 @@ public class UserController {
         return ResponseResult.success(userVO);
     }
 
-    @GetMapping("/sendMessage")
-    public ResponseResult sendMessage() {
-        return ResponseResult.success(messageProvider.send());
+    @GetMapping("/sendTestMessage")
+    public ResponseResult sendTestMessage() {
+        return ResponseResult.success(messageProvider.sendTest());
+    }
+
+    @GetMapping("/sendOrderMessage")
+    public ResponseResult sendOrderMessage() {
+        return ResponseResult.success(messageProvider.sendOrder(userName));
     }
 
 }

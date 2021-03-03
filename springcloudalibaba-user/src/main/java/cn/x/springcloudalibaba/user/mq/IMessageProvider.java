@@ -6,6 +6,8 @@ package cn.x.springcloudalibaba.user.mq;
  */
 public interface IMessageProvider {
 
-    String send();
+    String sendTest();
+
+    String sendOrder(String userName);
 
 }
