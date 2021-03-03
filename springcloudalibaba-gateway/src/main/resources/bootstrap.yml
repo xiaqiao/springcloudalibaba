@@ -3,8 +3,8 @@ spring:
     name: springcloudalibaba-gateway
   cloud:
     nacos:
-      username: admin
-      password: admin
+      username: nacos
+      password: x123
       config:
         server-addr: 47.100.120.80:8040
         file-extension: yaml
